@@ -9,9 +9,9 @@ function buyFlower() {
 }
 
 function finishMyWorkOnFriday() {
-  console.log("[Me] Thank God it's Friday!!!");
-  // console.log("[Me] But I can't keep my promise...");
-  // throw new Error("There is an urgent issue to solve...");
+  // console.log("[Me] Thank God it's Friday!!!");
+  console.log("[Me] But I can't keep my promise...");
+  throw new Error("There is an urgent issue to solve...");
 }
 
 const dinnerPromise = new Promise(function(resolve, reject) {
@@ -39,6 +39,6 @@ const onRejected = badNews => {
 };
 
 //dinnerPromise.then(onFulfilled, onRejected);
-dinnerPromise.then(onFulfilled).catch(onRejected);
+dinnerPromise.then(onFulfilled).catch(onRejected); //this is the preferred method to call
 
 console.log("Waiting till Friday....");
